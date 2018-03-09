@@ -25,6 +25,7 @@
             height     : 550,
             groupable  : true,
             sortable   : true,
+            scrollable : true,
             selectable : "row",
             change     : onChange,
             pageable   : {

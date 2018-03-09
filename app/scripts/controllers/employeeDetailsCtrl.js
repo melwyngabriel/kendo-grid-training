@@ -17,5 +17,6 @@
              console.log($scope.employee);
          });
 
-
+         $('.ui.accordion').accordion();
+         $('.menu .item').tab();
 });

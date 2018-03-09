@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Employee Management</title>
+    <link rel="icon" href=".\images\app-icon.png">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -13,7 +14,7 @@
     <!-- endbower -->
 
     <!-- endbuild -->
-
+    <link rel="stylesheet" href="bower_components\semantic\dist\semantic.css" />
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -21,7 +22,6 @@
     <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.common.min.css" />
     <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.default.min.css" />
     <link rel="stylesheet" href="../bower_components/kendo-ui/styles/kendo.default.mobile.min.css" />
-
     <!-- kendo -->
   </head>
 
@@ -29,11 +29,12 @@
     <div class="con">
         <div ui-view></div>
     </div>
+
     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> Melwyn Gabriel's project</p>
-      </div>
+        copyright:'© 2009-2018 MelS Development. All Rights Reserved.
+        <p style="float:right"><span class="glyphicon glyphicon-heart"> Melwyn Gabriel's project</p>
     </div>
+
 
 
 
@@ -51,14 +52,13 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/semantic/dist/semantic.js"></script>
     <!-- endbower -->
     <script src="http://kendo.cdn.telerik.com/2018.1.221/js/kendo.all.min.js"></script>
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/employeeTableCtrl.js"></script>
         <script src="scripts/controllers/employeeDetailsCtrl.js"></script>
         <!-- endbuild -->

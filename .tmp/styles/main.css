@@ -21,25 +21,31 @@ body {
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
+  height: 50 px;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
+
+
 
 .container-narrow > hr {
   margin: 30px 0;
 }
+
 
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -67,10 +73,7 @@ body {
 
 
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
+
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
@@ -80,14 +83,18 @@ body {
 header, footer {
     padding: 1em;
     color: white;
-    background-color: black;
+    background-color: darkslategrey;
     clear: left;
     text-align: center;
+}
+.con{
+
 }
 
 #grid {
     left:0;
-
+    padding-left: 30px;
+    padding-right: 30px;
 
 }
 #returnToList{
@@ -95,10 +102,44 @@ header, footer {
   background-color: darkgrey;
   color: black;
 }
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
+.max-width-employee-info {
+    width: -webkit-fill-available !important;
+    word-wrap: break-word;
+    padding: inherit;
 }
-th, td {
-    padding: 15px;
+.container.employeeDetails{
+  padding-top: 60px !important;
+}
+
+.employeeName{
+  font-size: 30px;
+}
+.button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button.goBackButton {background-color: #555555;}
+.header img {
+
+  width: 40px;
+  height: 40px;
+  float:left;
+
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+h3{
+  font-family:'Comic Sans MS', cursive, sans-serif
 }
