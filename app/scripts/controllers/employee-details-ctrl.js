@@ -11,7 +11,7 @@
    .controller('employeeDetailsCtrl', function ($scope, $stateParams,$http) {
 
 
-       $http.get("./employee_details.json")
+       $http.get("./assets/employees-list.json")
          .then(function(response) {
              $scope.employee = response.data[$stateParams.emp_id];
              console.log($scope.employee);

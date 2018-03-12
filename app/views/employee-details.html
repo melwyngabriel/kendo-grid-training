@@ -1,5 +1,6 @@
+
   <header class="header">
-    <h5>  <img src="..\images\app-icon.png" alt="logo" /></h5>
+    <h5>  <img src="favicon.ico" alt="logo" /></h5>
     <h3>EMPLOYEE DETAILS</h3>
   </header>
 
@@ -16,8 +17,8 @@
         {{employee.name}}
       </div>
     </div>
-    <div class="content active">
-      <table class="max-width-employee-info">
+    <div class="content active grid-container">
+      <!-- <table class="max-width-employee-info">
         <tr>
 
           <th>CONTACT:</th>
@@ -30,7 +31,12 @@
           <th>ADDRESS:</th>
           <td>{{employee.address}} </td>
         </tr>
-      </table>
+      </table> -->
+      <div></div>
+      <div><b>CONTACT:</b> {{employee.contact}} <br /> <div><b>ADDRESS:</b> {{employee.address}}</div></div>
+      <div><b>PROJECT:</b> {{employee.project}}</div>
+      <div class="zoomin"><img src="https://randomuser.me/api/portraits/thumb/men/{{employee.id}}.jpg" style="height:100px" alt="Employee Photo"></div>
+
     </div>
   </div>
   <div class="ui top attached tabular menu">
@@ -38,13 +44,15 @@
     <a class="item" data-tab="second">Second</a>
     <a class="item" data-tab="third">Third</a>
   </div>
-  <div class="ui bottom attached tab segment active" data-tab="first">
-    First
-  </div>
-  <div class="ui bottom attached tab segment" data-tab="second">
-    Second
-  </div>
-  <div class="ui bottom attached tab segment" data-tab="third">
-    Third
+  <div>
+    <div class="ui bottom attached tab segment active" data-tab="first">
+      <ng-include src="'views/employee-list.html'"></ng-include>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="second">
+      Second
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="third">
+      Third
+    </div>
   </div>
 </div>

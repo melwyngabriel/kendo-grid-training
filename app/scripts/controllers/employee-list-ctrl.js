@@ -8,7 +8,7 @@
  * Controller of the sampleProjectApp
  */
  angular.module('EmployeeApp')
-   .controller('employeeTableCtrl',['$scope', '$state', function ($scope, $state) {
+   .controller('employeeListCtrl',['$scope', '$state', function ($scope, $state) {
     $(document).ready(function () {
 
 
@@ -17,9 +17,9 @@
             dataSource : {
                 type     : "json",
                 transport: {
-                        read :"./employee_details.json"
+                        read :"./assets/employees-list.json"
                 },
-                pageSize : 10
+                pageSize : 7
             },
 
             height     : 550,
