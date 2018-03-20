@@ -3,41 +3,50 @@
     <h5>  <img src="favicon.ico" alt="logo" /></h5>
     <h3>EMPLOYEE DETAILS</h3>
   </header>
-
-<div>
-  <button id="returnToList" class="button goBackButton" ui-sref="employees" style="float:right">Return to list</button>
-</div>
-<div class="container employeeDetails">
+<div class="employeeDetailsContainer">
 
 
   <div class="ui styled fluid accordion">
+
     <div class="title active">
-      <div class="employeeName">
+      <div class="employeeDetailsName">
         <i class="dropdown icon"></i>
         {{employee.name}}
       </div>
     </div>
-    <div class="content active grid-container">
-      <!-- <table class="max-width-employee-info">
-        <tr>
+    <button id="editEmployeeButton" class="button" style="float:right">Edit Employee</button>
+    <!-- The Modal -->
+    <div id="editEmployeeModal" class="modal">
 
-          <th>CONTACT:</th>
-          <td>{{employee.contact}}</td>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form name="saveTemplateData" ng-submit="editEmployee()">
+          NAME:    <br/><input type="text" id="name" value={{employee.name}}>    <br/><br/>
+          CONTACT: <br/><input type="text" id="contact" value={{employee.contact}}> <br/><br/>
+          PROJECT: <br/><input type="text" id="project" value={{employee.project}}> <br/><br/>
+          POSITION: <br/><input type="text" id="position" value={{employee.position}}> <br/><br/>
+          ADDRESS: <br/><input type="text" id="address" value={{employee.address}}> <br/><br/>
+          <input type="submit" value="Submit">
+        </form>
 
-          <th>PROJECT:</th>
-          <td>{{employee.project}}</td>
-        </tr>
-        <tr>
-          <th>ADDRESS:</th>
-          <td>{{employee.address}} </td>
-        </tr>
-      </table> -->
-      <div></div>
-      <div><b>CONTACT:</b> {{employee.contact}} <br /> <div><b>ADDRESS:</b> {{employee.address}}</div></div>
-      <div><b>PROJECT:</b> {{employee.project}}</div>
-      <div class="zoomin"><img src="https://randomuser.me/api/portraits/thumb/men/{{employee.id}}.jpg" style="height:100px" alt="Employee Photo"></div>
+      </div>
 
     </div>
+    <div class="content active grid-container">
+        <div></div>
+        <div>
+          <div><b>CONTACT:</b> {{employee.contact}}</div><br />
+          <div><b>PROJECT:</b> {{employee.project}}</div><br />
+          <div><b>ADDRESS:</b> {{employee.address}}</div><br />
+          <div><b>POSITION:</b> {{employee.position}}</div>
+        </div>
+      <div class="zoomin"><img src="https://randomuser.me/api/portraits/thumb/men/{{employee.id}}.jpg" style="height:100px" alt="Employee Photo"></div>
+    </div>
+  </div>
+  <br />
+  <div>
+    <button id="returnToList" class="button" ui-sref="employees" style="float:right">Return to list</button>
   </div>
   <div class="ui top attached tabular menu">
     <a class="item active" data-tab="first">First</a>

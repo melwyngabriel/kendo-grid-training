@@ -23,7 +23,7 @@ angular
       .state('employees', {
         url: "/employees",
         templateUrl: 'views/employee-table.html',
-        controller: 'employeeTableCtrl',
+        controller: 'employeeListCtrl',
         controllerAs: 'employeeTable'
       })
       .state('employeeDetails', {
