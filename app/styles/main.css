@@ -88,9 +88,14 @@ header, footer {
 }
                                                             /* employee-details */
 .employeeDetailsContainer{
-  margin-top: 60px !important;
   margin-right: 50px;
   margin-left: 50px;
+}
+.ui.attached.tabular.menu {
+  margin-left: -1px !important;
+}
+.ui.bottom.attached.tab.segment.active{
+  border-top : none !important;
 }
 .grid-container {
   display: grid !important;

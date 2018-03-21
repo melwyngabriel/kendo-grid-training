@@ -1,52 +1,81 @@
 
-  <header class="header">
-    <h5>  <img src="favicon.ico" alt="logo" /></h5>
-    <h3>EMPLOYEE DETAILS</h3>
-  </header>
+<header class="header">
+  <h5>  <img src="favicon.ico" alt="logo" /></h5>
+  <h3>EMPLOYEE DETAILS</h3>
+</header>
+<div class="ui breadcrumb">
+  <a class="section" href="#!/">HOME</a>
+  <i class="right chevron icon divider"></i>
+  <div class="active section">DETAIL</div>
+</div>
+</br>
+</br>
 <div class="employeeDetailsContainer">
-
-
+  <button id="editEmployeeButton" class="ui green basic medium right floated icon button">
+    <i class="edit icon"></i>
+  </button>
   <div class="ui styled fluid accordion">
-
     <div class="title active">
       <div class="employeeDetailsName">
         <i class="dropdown icon"></i>
         {{employee.name}}
       </div>
     </div>
-    <button id="editEmployeeButton" class="button" style="float:right">Edit Employee</button>
-    <!-- The Modal -->
-    <div id="editEmployeeModal" class="modal">
 
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <form name="saveTemplateData" ng-submit="editEmployee()">
-          NAME:    <br/><input type="text" id="name" value={{employee.name}}>    <br/><br/>
-          CONTACT: <br/><input type="text" id="contact" value={{employee.contact}}> <br/><br/>
-          PROJECT: <br/><input type="text" id="project" value={{employee.project}}> <br/><br/>
-          POSITION: <br/><input type="text" id="position" value={{employee.position}}> <br/><br/>
-          ADDRESS: <br/><input type="text" id="address" value={{employee.address}}> <br/><br/>
-          <input type="submit" value="Submit">
-        </form>
-
-      </div>
-
-    </div>
     <div class="content active grid-container">
         <div></div>
         <div>
           <div><b>CONTACT:</b> {{employee.contact}}</div><br />
           <div><b>PROJECT:</b> {{employee.project}}</div><br />
           <div><b>ADDRESS:</b> {{employee.address}}</div><br />
-          <div><b>POSITION:</b> {{employee.position}}</div>
+          <div><b>POSITION:</b>{{employee.position}}</div>
         </div>
       <div class="zoomin"><img src="https://randomuser.me/api/portraits/thumb/men/{{employee.id}}.jpg" style="height:100px" alt="Employee Photo"></div>
     </div>
   </div>
+  <!-- The Modal -->
+  <div id="editEmployeeModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form name="saveTemplateData" action="/#!/" ng-submit="editEmployee()">
+        <b>NAME:</b>    <br/>
+        <div class="ui  input">
+          <input type="text" id="name" value={{employee.name}}>
+        </div>
+        <br/>
+        <br/>
+        <b>CONTACT:</b> <br/>
+        <div class="ui  input">
+          <input type="text" id="contact" value={{employee.contact}}> <br/><br/>
+        </div>
+        <br/>
+        <br/>
+        <b>PROJECT:</b> <br/>
+        <div class="ui  input">
+          <input type="text" id="project" value={{employee.project}}> <br/><br/>
+        </div>
+        <br/>
+        <br/>
+        <b>POSITION:</b> <br/>
+        <div class="ui  input">
+          <input type="text" id="position" value={{employee.position}}> <br/><br/>
+        </div>
+        <br/>
+        <br/>
+        <b>ADDRESS:</b> <br/>
+        <div class="ui  input">
+          <input type="text" id="address" value={{employee.address}}> <br/><br/>
+        </div>
+        <br/>
+        <br/>
+        <button type="submit" class="ui green basic medium button"><b>SUBMIT</b></button>
+      </form>
+    </div>
+  </div>
   <br />
   <div>
-    <button id="returnToList" class="button" ui-sref="employees" style="float:right">Return to list</button>
+    <button id="returnToList" class="ui green basic medium button" ui-sref="employees" style="float:right">Return to list</button>
   </div>
   <div class="ui top attached tabular menu">
     <a class="item active" data-tab="first">First</a>
