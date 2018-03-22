@@ -75,11 +75,19 @@ angular.module('EmployeeApp')
                $(function(){
                $('#subBtn').attr('disabled', true);
 
-               $('#resetBtn :input').on('click', function(){
+               $('#resetBtn').on('click', function(){
                    $('#subBtn').attr('disabled',true);
                });
-               $('#detailsForm :input').on('change', function(){
+               var lastValue = '';
+               $('#detailsForm :input').on('change keyup paste', function(){
+                 if ($(this).val() != lastValue) {
+                   lastValue = $(this).val();
                    $('#subBtn').removeAttr('disabled',false);
+                 }
+                 if ($(this).val() = lastValue) {
+                   lastValue = $(this).val();
+                   $('#subBtn').attr('disabled',true);
+                 }
                });
            });
   //modal edit employee submit button

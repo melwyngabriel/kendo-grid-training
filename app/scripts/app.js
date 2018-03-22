@@ -22,12 +22,14 @@ angular
     $stateProvider
       .state('employees', {
         url: "/employees",
+        reloadOnSearch: false,
         templateUrl: 'views/employee-table.html',
         controller: 'employeeListCtrl',
         controllerAs: 'employeeTable'
       })
       .state('employeeDetails', {
         url: '/:emp_id/Details',
+        reloadOnSearch: false,
         templateUrl: 'views/employee-details.html',
         controller: 'employeeDetailsCtrl',
         controllerAs: 'employeeDetails'
