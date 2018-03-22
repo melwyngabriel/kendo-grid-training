@@ -9,3 +9,6 @@
   padding: 20px 0;
   font-size: 30px;
 }
+span.k-widget.k-maskedtextbox {
+  width: 100%;
+}

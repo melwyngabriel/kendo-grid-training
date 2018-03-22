@@ -30,7 +30,7 @@
           <div><b>ADDRESS:</b> {{employee.address}}</div><br />
           <div><b>POSITION:</b>{{employee.position}}</div>
         </div>
-      <div class="zoomin"><img src="https://randomuser.me/api/portraits/thumb/men/{{employee.id}}.jpg" style="height:100px" alt="Employee Photo"></div>
+      <div class="zoomin"><img src="https://randomuser.me/api/portraits/men/{{employee.id}}.jpg" style="height:100px" alt="Employee Photo"></div>
     </div>
   </div>
   <!-- The Modal -->
@@ -38,38 +38,40 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <form name="saveTemplateData" action="/#!/" ng-submit="editEmployee()">
-        <b>NAME:</b>    <br/>
-        <div class="ui  input">
-          <input type="text" id="name" value={{employee.name}}>
+      <div class="ui horizontal divider">Edit Employee</div>
+      <form id="detailsForm" class="ui form segment" action="/#!/" ng-submit="editEmployee()">
+        <p>Tell Us What to Change</p>
+        <div class="two fields">
+          <div class="field">
+            <label>NAME</label>
+            <input   placeholder="First Name" id="name" name="name"     value={{employee.name}}     type="text">
+          </div>
+          <div class="field">
+            <div class="field">
+              <label>PROJECT</label>
+              <input placeholder="Project"   id="project" name="project"  value={{employee.project}}  type="text">
+            </div>
+          </div>
         </div>
-        <br/>
-        <br/>
-        <b>CONTACT:</b> <br/>
-        <div class="ui  input">
-          <input type="text" id="contact" value={{employee.contact}}> <br/><br/>
+        <div class="two fields">
+          <div class="field">
+            <label>POSITION</label>
+            <input   placeholder="Position"  id="position" name="position" value={{employee.position}} type="text">
+          </div>
+          <div class="field">
+            <label>CONTACT</label>
+            <div id="fieldlist">
+              <input   placeholder="Contact"   id="contact" name="contact"  value="784512457845"  type="text">
+            </div>
+          </div>
         </div>
-        <br/>
-        <br/>
-        <b>PROJECT:</b> <br/>
-        <div class="ui  input">
-          <input type="text" id="project" value={{employee.project}}> <br/><br/>
+        <div class="field">
+          <label>ADDRESS</label>
+          <input   placeholder="Address"     id="address"     name="address"  value={{employee.address}}  type="text">
         </div>
-        <br/>
-        <br/>
-        <b>POSITION:</b> <br/>
-        <div class="ui  input">
-          <input type="text" id="position" value={{employee.position}}> <br/><br/>
-        </div>
-        <br/>
-        <br/>
-        <b>ADDRESS:</b> <br/>
-        <div class="ui  input">
-          <input type="text" id="address" value={{employee.address}}> <br/><br/>
-        </div>
-        <br/>
-        <br/>
-        <button type="submit" class="ui green basic medium button"><b>SUBMIT</b></button>
+        <button id="subBtn" type="submit" class="ui green basic medium button">Submit</button>
+        <button id="resetBtn" type="reset" value="Reset" class="ui green basic medium button" style="float:right">Reset</button>
+        <div class="ui error message"></div>
       </form>
     </div>
   </div>

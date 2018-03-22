@@ -35,6 +35,53 @@ angular.module('EmployeeApp')
       modal.style.display = "none";
     }
   }
+  //modal form validation
+  $('.ui.form')
+    .form({
+      fields: {
+        name      : {
+                    rules: [{
+                      type: 'empty'
+                      }]
+                    },
+        project   :  {
+                    rules: [{
+                      type: 'empty'
+                      }]
+                    },
+        position  :  {
+                    rules: [{
+                      type: 'empty'
+                      }]
+                    },
+        address   :  {
+                    rules: [{
+                      type: 'empty'
+                      }]
+                    },
+        contact   : {
+                    rules: [{
+                      type: 'regExp',
+                      value: /^(\+\d{2})\s\((\d{3})\)\s(\d{3})\-(\d{4})$/g,
+                      prompt: 'Enter number like Eg: +91 (123) 123-1234'
+                      }]
+                    }
+      }
+    });
+    $("#contact").kendoMaskedTextBox({
+                   mask: "+99 (999) 000-0000"
+               });
+  //modal submit button disable
+               $(function(){
+               $('#subBtn').attr('disabled', true);
+
+               $('#resetBtn :input').on('click', function(){
+                   $('#subBtn').attr('disabled',true);
+               });
+               $('#detailsForm :input').on('change', function(){
+                   $('#subBtn').removeAttr('disabled',false);
+               });
+           });
   //modal edit employee submit button
   $scope.editEmployee = function(){
     var empName     = document.getElementById('name').value;

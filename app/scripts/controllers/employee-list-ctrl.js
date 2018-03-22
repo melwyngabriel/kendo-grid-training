@@ -38,7 +38,7 @@ angular.module('EmployeeApp')
         width: 5
       }, {
         template: "<div class='employee-photo'" +
-        "style='background-image: url(https://randomuser.me/api/portraits/thumb/men/#: id #.jpg);'></div>"+
+        "style='background-image: url(https://randomuser.me/api/portraits/men/#: id #.jpg);'></div>"+
         "<div class='employee-name'>#: name #</div>",
         field:"name",
         width: 20
