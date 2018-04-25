@@ -7,6 +7,7 @@
 * # AboutCtrl
 * Controller of the sampleProjectApp
 */
+
 angular.module('EmployeeApp')
 .controller('employeeDetailsCtrl', function ($scope, $stateParams,$http) {
   $http.get("http://pc1369:8080/EmployeeManagement/getEmployee")
